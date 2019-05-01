@@ -22,12 +22,12 @@ InstallAmbientePHP() {
 
 	echo -n "informe o nome de usuário do git:"
 	read nome
-	git config --global user.name "($nome)"
+	git config --global user.name "$nome"
 	echo
 
 	echo -n "Informe o email para configurar o git:"
 	read email
-	git config --global user.email "($email)"
+	git config --global user.email "$email"
 	echo
 
 	echo -n "Instalando o composer!"

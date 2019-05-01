@@ -62,40 +62,58 @@ Principal() {
 			PermissionPaste
 			sleep 5 ;;
 		8)
-			clear
-			echo "============================"
-			echo "Ambiente de Desenvolvimento"
-			echo "============================"
-			echo
-			echo "1. Ambiente PHP"
-			echo "2. Ambiente Laradock"
-			echo "3. Ambiente Docker"
-			echo "4. Editores de Texto/IDE para programar"
-			echo "4. Voltar ao menu principal"
-			echo
-			echo -n "Qual a opção desejada? "
-			read opcao
+			subMenu() {
+				clear
+				echo "============================"
+				echo "Ambiente de Desenvolvimento"
+				echo "============================"
+				echo
+				echo "1. Ambiente PHP"
+				echo "2. Ambiente Laradock"
+				echo "3. Ambiente Docker"
+				echo "4. Editores de Texto/IDE para programar"
+				echo "5. Voltar ao menu principal"
+				echo
+				echo -n "Qual a opção desejada? "
+				read opcao
 
-			case $opcao in
-				1)
-					InstallBasics
-					InstallAmbientePHP
-					sleep 5 ;;
-				2)
-					InstallBasics
-					InstallAmbienteLaradock
-	  				sleep 5 ;;
-	  			3)
-					InstallBasics
-					InstallDocker
-					sleep 5 ;;
-				4)
-					InstallBasics
-					InstallEditores
-					sleep 5 ;;
-				5)
-					Principal
-					sleep 5 ;;
-			esac
+				case $opcao in
+					1)
+						InstallBasics
+						InstallAmbientePHP
+						sleep 5
+						clear
+						subMenu ;;
+					2)
+						InstallBasics
+						InstallAmbienteLaradock						
+		  				sleep 5
+		  				clear
+						subMenu ;;
+		  			3)
+						InstallBasics
+						InstallDocker
+						sleep 5
+						clear
+						subMenu ;;
+					4)
+						InstallBasics
+						InstallEditores
+						sleep 5
+						clear
+						subMenu ;;
+					5)
+						clear
+						Principal
+						sleep 5 ;;
+					*) 
+						echo "Opção inválida! Tente novamente!" 
+						exit 
+						Principal
+						sleep 5 ;;
+				esac
+			}
+			subMenu
 	esac
 }
+Principal
