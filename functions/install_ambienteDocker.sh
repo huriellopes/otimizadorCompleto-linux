@@ -1,8 +1,8 @@
 InstallDocker() {
-	echo -n "Instalação do Docker"
+	  echo -n "Instalação do Docker"
   	echo
 
-	echo -n "Adicionando o repositório"
+	  echo -n "Adicionando o repositório"
   	sudo apt-get install \
     	apt-transport-https \
     	ca-certificates \
@@ -28,10 +28,15 @@ InstallDocker() {
    	echo -e "[${green} Docker verificado com sucesso! ${NC}]\n"
    	echo
 
+    echo -n "Testando o Docker!"
+    docker --version
+    echo
+    sleep 5
+
    	echo -n "Atualizando o sistema"
-	sudo apt-get update > /dev/null 2>&1
-	echo -e "[${green} Atualizado com Sucesso! ${NC}]\n"
-	echo
+	  sudo apt-get update > /dev/null 2>&1
+	  echo -e "[${green} Atualizado com Sucesso! ${NC}]\n"
+	  echo
   	
   	echo -n "Instalação do Docker Compose"
   	echo
@@ -47,22 +52,23 @@ InstallDocker() {
   	echo
 
   	echo -n "Adicionando o instalador!"
- 	sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose > /dev/null 2>&1
- 	echo -e "[${green} Adicionado com sucesso! ${NC}]\n"
- 	echo
+ 	  sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose > /dev/null 2>&1
+ 	  echo -e "[${green} Adicionado com sucesso! ${NC}]\n"
+ 	  echo
 
- 	echo -n "Dando permissão!"
- 	sudo chmod +x /usr/local/bin/docker-compose
- 	echo -e "[${green} Permissão dada com Sucesso! ${NC}]\n"
- 	echo
+ 	  echo -n "Dando permissão!"
+ 	  sudo chmod +x /usr/local/bin/docker-compose
+ 	  echo -e "[${green} Permissão dada com Sucesso! ${NC}]\n"
+ 	  echo
 
- 	echo -n "Testando o docker-compose"
- 	docker-compose --version
- 	echo -e "[${green} Testado com Sucesso! ${NC}]\n"
- 	echo
+ 	  echo -n "Testando o docker-compose"
+ 	  docker-compose --version
+ 	  echo -e "[${green} Testado com Sucesso! ${NC}]\n"
+ 	  echo
+    sleep 5
 
- 	echo -n "Atualizando o sistema"
-	sudo apt-get update > /dev/null 2>&1
-	echo -e "[${green} Atualizado com Sucesso! ${NC}]\n"
-	echo
+ 	  echo -n "Atualizando o sistema"
+	  sudo apt-get update > /dev/null 2>&1
+	  echo -e "[${green} Atualizado com Sucesso! ${NC}]\n"
+	  echo
 }
