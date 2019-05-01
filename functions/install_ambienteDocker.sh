@@ -29,6 +29,7 @@ InstallDocker() {
    	echo
 
     echo -n "Testando o Docker!"
+    echo
     docker --version
     echo
     sleep 5
@@ -62,6 +63,7 @@ InstallDocker() {
  	  echo
 
  	  echo -n "Testando o docker-compose"
+    echo
  	  docker-compose --version
  	  echo -e "[${green} Testado com Sucesso! ${NC}]\n"
  	  echo

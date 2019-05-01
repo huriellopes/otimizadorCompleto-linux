@@ -11,6 +11,7 @@ InstallAmbientePHP() {
 	echo
 
 	echo -n "Testando o MySQL!"
+	echo
 	mysql --version
 	echo
 	sleep 5
@@ -20,6 +21,7 @@ InstallAmbientePHP() {
 	echo
 
 	echo -n "Testando o git!"
+	echo
 	php -v
 	echo
 	sleep 5	
@@ -29,6 +31,7 @@ InstallAmbientePHP() {
 	echo
 
 	echo -n "Testando o git!"
+	echo
 	git --version
 	echo
 	sleep 5
@@ -49,6 +52,12 @@ InstallAmbientePHP() {
 	echo -n "Instalando o composer!"
 	sudo apt-get install composer > /dev/null 2>&1
 	echo
+	
+	echo -n "Testando o composer!"
+	echo
+	composer --version
+	echo
+	sleep 5
 
 	echo -n "Atualizando o sistema"
 	sudo apt-get update > /dev/null 2>&1
