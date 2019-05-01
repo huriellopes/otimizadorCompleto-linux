@@ -7,7 +7,7 @@ InstallAmbientePHP() {
 	echo
 
 	echo -n "Instalando o MySQL!"
-	sudo apt-get install mysql-server > /dev/null 2>&1
+	echo sudo apt-get install mysql-server > /dev/null 2>&1
 	echo
 
 	echo -n "Testando o MySQL!"
