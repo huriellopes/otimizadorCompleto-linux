@@ -42,25 +42,39 @@ Principal() {
 	case $opcaoPrincipal in
 		1)
 			ListUsers
-			sleep 5 ;;
+			sleep 15
+			clear
+			Principal ;;
 		2)
 			AddUsers
-			sleep 5 ;;
+			sleep 6
+			clear
+			Principal ;;
 		3)
 			AddGroup
-			sleep 5 ;;
+			sleep 6
+			clear
+			Principal ;;
 		4)
 			AddUserGroup
-			sleep 5 ;;
+			sleep 6
+			clear
+			Principal ;;
 		5)
 			DelGroup
-			sleep 5 ;;
+			sleep 6
+			clear
+			Principal ;;
 		6)
 			DelUser
-			sleep 5 ;;
+			sleep 6
+			clear
+			Principal ;;
 		7)
 			PermissionPaste
-			sleep 5 ;;
+			sleep 6
+			clear
+			Principal ;;
 		8)
 			subMenu() {
 				clear
@@ -103,14 +117,14 @@ Principal() {
 						clear
 						subMenu ;;
 					5)
+						sleep 5 
 						clear
-						Principal
-						sleep 5 ;;
+						Principal ;;
 					*) 
 						echo "Opção inválida! Tente novamente!" 
-						exit 
-						Principal
-						sleep 5 ;;
+						sleep 2
+						clear
+						subMenu ;;
 				esac
 			}
 			subMenu

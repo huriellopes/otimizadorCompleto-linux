@@ -5,7 +5,7 @@
 DelUser() {
 	echo -n "Informe o nome de usuário para deletar?"
 	read nome
-	deluser $nome
+	sudo deluser $nome
 	echo
 	echo -e "[${green} usuário deletado com sucesso!${NC}]\n"
 }

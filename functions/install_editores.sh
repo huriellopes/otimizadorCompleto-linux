@@ -10,6 +10,7 @@ InstallEditores() {
 	echo "4. Editor VsCode"
 	echo "5. Voltar ao menu principal"
 	echo
+	echo -n "Qual a opção desejada? "
 	read op
 
 	case $op in
@@ -29,17 +30,23 @@ InstallEditores() {
 			echo -n "Instalando o Sublime text!"
 			sudo apt-get install sublime-text > /dev/null 2>&1
 			echo -e "[${green} Sublime instalado com sucesso! ${NC}]\n"
-			sleep 5 ;;
+			sleep 5 
+			clear
+			InstallEditores ;;
 		2)
 			echo -n "Instalando o editor Vi!"
 			sudo apt-get install vi > /dev/null 2>&1
 			echo -e "[${green} Editor Vi instalado com sucesso! ${NC}]\n"
-			sleep 5 ;;
+			sleep 5 
+			clear
+			InstallEditores ;;
 		3)
 			echo -n "Instalando o editor Vim!"
 			sudo apt-get install vim > /dev/null 2>&1
 			echo -e "[${green} Editor Vim instalado com sucesso! ${NC}]\n"
-			sleep 5 ;;
+			sleep 5 
+			clear
+			InstallEditores ;;
 		4)
 			echo -n "Deletando o vscode anterior!"
 			sudo rm -Rf /opt/vscode/* > /dev/null 2>&1
@@ -87,9 +94,12 @@ InstallEditores() {
 			# echo -n "Instalando o editor vscode!"
 			# sudo apt-get install > /dev/null 2>&1
 			# echo -e "[${green} Editor vscode instalado com sucesso! ${NC}]\n"
-			sleep 5 ;;
+			sleep 5 
+			clear
+			InstallEditores ;;
 		5)
-			Principal
-			sleep 5 ;;
+			sleep 5 
+			clear
+			Principal ;;
 	esac
 }
